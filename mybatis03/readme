@@ -1,0 +1,12 @@
+开发规则：
+（1）在Mapper.xml中将namespace设置为UserDao.java接口的全限定名
+（2）将Mapper.xml中statement的id和UserDao.java接口的方法名保持一致。
+（3）将Mapper.xml中statement的parameterType和UserDao.java接口的方法输入参数类型保持一致
+（4）将Mapper.xml中statement的resultType和UserDao.java接口的方法输出结果类型保持一致
+（5）注意结合业务层动态代理提交事务
+
+1.在Mapper.xml中将namespace设置为UserDao.java接口的全限定名
+2.将Mapper.xml中statement的id和UserDao.java接口的方法名保持一致。
+3.将Mapper.xml中的statement的parameterType和UserDao.java接口的方法输入参数类型保持一致
+4.将Mapper.xml中的statement的resultType和UserDao.java接口的方法输出结果类型保持一致
+5.注意结合业务层动态代理提交事务
