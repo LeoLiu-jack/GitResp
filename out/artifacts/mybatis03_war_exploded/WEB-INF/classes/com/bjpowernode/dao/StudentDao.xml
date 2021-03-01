@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.StudentDao">
+  <!--重新写一遍，在熟悉一遍-->
+  <!--处理查询操作，select的resultType标签一定要写-->
+  <select id="getById" resultType="com.bjpowernode.domain.Student">
+    select id,name,age from tbl_student where id = #{id};
+  </select>
+
+  <!--处理添加操作，只需写id标签即可-->
+  <insert id="save">
+    insert into tbl_student(id,name,age) values(#{id},#{name},#{age});
+  </insert>
+
+  <!--查询所有的信息-->
+  <select id="getAll" resultType="Student">
+    select * from tbl_student;
+  </select>
+</mapper>
